@@ -1,8 +1,7 @@
-package com.example.healthcare_umc.view
+package com.example.healthcare_umc_160420046
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.healthcare_umc.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

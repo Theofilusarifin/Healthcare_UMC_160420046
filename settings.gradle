@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Healthcare_UMC"
+rootProject.name = "Healthcare_UMC_160420046"
 include ':app'

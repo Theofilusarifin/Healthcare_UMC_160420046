@@ -1,4 +1,4 @@
-package com.example.healthcare_umc
+package com.example.healthcare_umc_160420046
 
 import org.junit.Test
 
