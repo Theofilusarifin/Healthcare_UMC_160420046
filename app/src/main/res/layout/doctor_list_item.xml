@@ -24,10 +24,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <Button
+                android:id="@+id/btnSeeDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="See Detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtSpecialistName" />
+
             <ImageView
                 android:id="@+id/imgMedicineList"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -36,20 +46,22 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/txtMedicine"
+                android:id="@+id/txtDoctorName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="DOCTOR NAME"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/imgMedicineList"
-                tools:layout_editor_absoluteY="43dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txtPrice"
+                android:id="@+id/txtSpecialistName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -58,7 +70,7 @@
                 android:text="Doctor Specialist Type"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imgMedicineList"
-                app:layout_constraintTop_toBottomOf="@+id/txtMedicine" />
+                app:layout_constraintTop_toBottomOf="@+id/txtDoctorName" />
 
             <ProgressBar
                 android:id="@+id/progressBar"
@@ -69,6 +81,23 @@
                 app:layout_constraintEnd_toEndOf="@+id/imgMedicineList"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imgMedicineList" />
+
+            <RatingBar
+                android:id="@+id/ratingBarDoctor"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clickable="false"
+                android:contextClickable="false"
+                android:focusableInTouchMode="false"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:progressTint="#FFC107"
+                android:rating="4"
+                app:layout_constraintTop_toBottomOf="@+id/txtSpecialistName"
+                tools:layout_editor_absoluteX="116dp" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

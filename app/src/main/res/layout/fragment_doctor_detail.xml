@@ -44,7 +44,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="24dp"
-                android:text="Book Title"
+                android:text="Doctor Name"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -56,9 +56,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
-                android:text="Specialist Type"
+                android:text="Doctor Specialist Type"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imgDetailDetail"
                 app:layout_constraintTop_toBottomOf="@+id/txtDoctorNameDetail" />
@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="32dp"
-                android:text="Book Description"
+                android:text="Doctor Description"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgDetailDetail" />
@@ -86,13 +86,30 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
+            <RatingBar
+                android:id="@+id/ratingBarDoctorDetail"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:clickable="false"
+                android:contextClickable="false"
+                android:focusableInTouchMode="false"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:progressTint="#FFC107"
+                android:rating="4"
+                app:layout_constraintStart_toEndOf="@+id/imgDetailDetail"
+                app:layout_constraintTop_toBottomOf="@+id/txtSpecialistDetail" />
+
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
-                android:text="Doctor ID"
+                android:text="Doctor ID :"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtDoctorDesc" />
@@ -103,10 +120,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
-                android:text="Online publication date :"
+                android:text="Date of Birth :"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtPublisher" />
+                app:layout_constraintTop_toBottomOf="@+id/txtDoctorID" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -114,10 +131,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
-                android:text="Print Publication Year :"
+                android:text="Age :"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtOPD" />
+                app:layout_constraintTop_toBottomOf="@+id/txtDOB" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -125,35 +142,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
-                android:text="Online ISBN : "
+                android:text="Gender : "
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtPPY" />
+                app:layout_constraintTop_toBottomOf="@+id/txtAge" />
 
             <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:text="DOI :"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtISBN" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:text="Subjects : "
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtDOI" />
-
-            <TextView
-                android:id="@+id/txtPublisher"
+                android:id="@+id/txtDoctorID"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -163,65 +158,34 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtDoctorDesc" />
 
             <TextView
-                android:id="@+id/txtOPD"
+                android:id="@+id/txtDOB"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
-                android:text="April 2022"
+                android:text="20/04/1995"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtPublisher" />
+                app:layout_constraintTop_toBottomOf="@+id/txtDoctorID" />
 
             <TextView
-                android:id="@+id/txtPPY"
+                android:id="@+id/txtAge"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
-                android:text="2022"
+                android:text="57"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtOPD" />
+                app:layout_constraintTop_toBottomOf="@+id/txtDOB" />
 
             <TextView
-                android:id="@+id/txtISBN"
+                android:id="@+id/txtGender"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
-                android:text="0123456789012"
+                android:text="Male"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtPPY" />
-
-            <TextView
-                android:id="@+id/txtDOI"
-                android:layout_width="175dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:text="https://doi.org/10.1017/AB0123456789012"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtISBN" />
-
-            <TextView
-                android:id="@+id/txtSubjects"
-                android:layout_width="175dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="32dp"
-                android:text="Advanced Native Mobile Programming, Kotlin Language"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtDOI" />
-
-            <Button
-                android:id="@+id/btnSeeSchedule"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:text="See Schedule"
-                app:layout_constraintBottom_toBottomOf="@+id/imgDetailDetail"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/txtAge" />
 
             <ProgressBar
                 android:id="@+id/progressBarDetail"
