@@ -2,9 +2,10 @@ package com.example.healthcare_umc_160420046.model
 
 data class Doctor(
     val id:String?,
+    val img:String?,
     val name:String?,
     val type:String?,
-    val rating:Int?,
+    val rating:Float?,
     val description:String?,
     val dob:String?,
     val age:Int?,
@@ -12,16 +13,13 @@ data class Doctor(
     )
 
 data class Schedule(
-    val monday:String?,
-    val tuesday:String?,
-    val wednesday:String?,
-    val thursday:String?,
-    val friday:String?,
-    val saturday:String?,
+    val day:String?,
+    val time:String?,
     )
 
 data class Medicine(
     val id:String?,
+    val img:String?,
     val name:String?,
     val stock:Int?,
     val price:Int?,
