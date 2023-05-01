@@ -5,15 +5,15 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.android.volley.Request
-import com.example.healthcare_umc_160420046.model.Medicine
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.example.healthcare_umc_160420046.model.Schedule
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class MedicineListViewModel(application: Application): AndroidViewModel(application) {
-    val medicineLD = MutableLiveData<List<Medicine>>()
+class DoctorScheduleViewModel (application: Application): AndroidViewModel(application) {
+    val scheduleLD = MutableLiveData<List<Schedule>>()
     val loadingErrorLD = MutableLiveData<Boolean>()
     val loadingLD = MutableLiveData<Boolean>()
 
@@ -22,7 +22,7 @@ class MedicineListViewModel(application: Application): AndroidViewModel(applicat
 
     fun refresh() {
         loadingErrorLD.value = false
-        loadingLD.value = true
+        loadingLD.value=true
 
         queue = Volley.newRequestQueue(getApplication())
         var url = "https://ubaya.fun/flutter/160419080/ANMP/ebook.php"
@@ -30,9 +30,9 @@ class MedicineListViewModel(application: Application): AndroidViewModel(applicat
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             { response ->
-                val sType = object : TypeToken<List<Medicine>>(){}.type
-                val result = Gson().fromJson<List<Medicine>>(response, sType)
-                medicineLD.value = result
+                val sType = object : TypeToken<List<Schedule>>(){}.type
+                val result = Gson().fromJson<List<Schedule>>(response, sType)
+                scheduleLD.value = result
 
                 loadingLD.value = false
                 Log.d("showvoley", response.toString())

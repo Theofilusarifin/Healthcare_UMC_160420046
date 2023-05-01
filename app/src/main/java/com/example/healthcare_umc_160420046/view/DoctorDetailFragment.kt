@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.example.healthcare_umc_160420046.R
 
 class DoctorDetailFragment : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
