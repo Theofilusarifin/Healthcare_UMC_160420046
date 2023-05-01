@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 
 $arr = null;
-$conn = new mysqli("localhost", "hybrid_160420046", "ubaya", "hybrid_160420046");
+$conn = new mysqli("localhost", "id20685292_localhost", "Password_!@#4", "id20685292_umc_healthcare");
 
 if ($conn->connect_error) {
     $arr = ["result" => "error", "message" => "unable to connect"];
