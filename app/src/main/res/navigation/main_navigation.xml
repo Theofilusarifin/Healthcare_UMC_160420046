@@ -13,6 +13,9 @@
         <action
             android:id="@+id/actionRegister"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/actionLoginToDoctorList"
+            app:destination="@id/doctorListFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -22,5 +25,62 @@
         <action
             android:id="@+id/actionRegToLog"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/actionRegisterToDoctorList"
+            app:destination="@id/doctorListFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/doctorListFragment"
+        android:name="com.example.healthcare_umc_160420046.view.DoctorListFragment"
+        android:label="Doctor" >
+        <action
+            android:id="@+id/actionDoctorDetail"
+            app:destination="@id/doctorDetailFragment" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorDetailFragment"
+        android:name="com.example.healthcare_umc_160420046.view.DoctorDetailFragment"
+        android:label="Doctor"
+        tools:layout="@layout/fragment_doctor_detail">
+        <argument
+            android:name="doctorID"
+            app:argType="string" />
+        <action
+            android:id="@+id/actionDoctorSchedule"
+            app:destination="@id/doctorScheduleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorScheduleFragment"
+        android:name="com.example.healthcare_umc_160420046.view.DoctorScheduleFragment"
+        android:label="Doctor">
+        <argument
+            android:name="doctorID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineDetailFragment"
+        android:name="com.example.healthcare_umc_160420046.view.MedicineDetailFragment"
+        android:label="Medicine" >
+        <argument
+            android:name="medicineID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineListFragment"
+        android:name="com.example.healthcare_umc_160420046.view.MedicineListFragment"
+        android:label="Medicine">
+        <action
+            android:id="@+id/actionMedicineDetail"
+            app:destination="@id/medicineDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.healthcare_umc_160420046.view.ProfileFragment"
+        android:label="ProfileFragment" />
 </navigation>
