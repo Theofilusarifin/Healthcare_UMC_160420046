@@ -15,7 +15,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imgDetailDetail"
+                android:id="@+id/imgMedicineDetail"
                 android:layout_width="80dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="24dp"
@@ -34,7 +34,7 @@
                 android:layout_marginEnd="24dp"
                 android:text="Medicine Detail"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgDetailDetail"
+                app:layout_constraintStart_toEndOf="@+id/imgMedicineDetail"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -47,7 +47,7 @@
                 android:text="Rp16.000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/imgDetailDetail"
+                app:layout_constraintStart_toEndOf="@+id/imgMedicineDetail"
                 app:layout_constraintTop_toBottomOf="@+id/txtMedicineNameDetail" />
 
             <TextView
@@ -61,7 +61,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgDetailDetail"
+                app:layout_constraintStart_toEndOf="@+id/imgMedicineDetail"
                 app:layout_constraintTop_toBottomOf="@+id/txtMedicineDetail" />
 
             <TextView
@@ -73,10 +73,10 @@
                 android:text="Medicine Description"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imgDetailDetail" />
+                app:layout_constraintTop_toBottomOf="@+id/imgMedicineDetail" />
 
             <TextView
-                android:id="@+id/txtDoctorDesc"
+                android:id="@+id/txtMedicineDesc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -96,7 +96,7 @@
                 android:text="Medicine ID :"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtDoctorDesc" />
+                app:layout_constraintTop_toBottomOf="@+id/txtMedicineDesc" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -129,7 +129,7 @@
                 android:text="Minimum Age of Use : "
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtUsage" />
+                app:layout_constraintTop_toBottomOf="@+id/txtDosage" />
 
             <TextView
                 android:id="@+id/txtMedicineID"
@@ -139,7 +139,7 @@
                 android:layout_marginEnd="24dp"
                 android:text="160420046"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtDoctorDesc" />
+                app:layout_constraintTop_toBottomOf="@+id/txtMedicineDesc" />
 
             <TextView
                 android:id="@+id/txtStock"
@@ -152,7 +152,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtMedicineID" />
 
             <TextView
-                android:id="@+id/txtUsage"
+                android:id="@+id/txtDosage"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -162,24 +162,24 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtStock" />
 
             <TextView
-                android:id="@+id/txtMinimumAge"
+                android:id="@+id/txtMinAge"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
                 android:text="17 Years"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtUsage" />
+                app:layout_constraintTop_toBottomOf="@+id/txtDosage" />
 
             <ProgressBar
                 android:id="@+id/progressBarDetail"
                 style="?android:attr/progressBarStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/imgDetailDetail"
-                app:layout_constraintEnd_toEndOf="@+id/imgDetailDetail"
-                app:layout_constraintStart_toStartOf="@+id/imgDetailDetail"
-                app:layout_constraintTop_toTopOf="@+id/imgDetailDetail" />
+                app:layout_constraintBottom_toBottomOf="@+id/imgMedicineDetail"
+                app:layout_constraintEnd_toEndOf="@+id/imgMedicineDetail"
+                app:layout_constraintStart_toStartOf="@+id/imgMedicineDetail"
+                app:layout_constraintTop_toTopOf="@+id/imgMedicineDetail" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
