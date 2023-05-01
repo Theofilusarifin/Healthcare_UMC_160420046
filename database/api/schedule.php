@@ -6,37 +6,35 @@ $conn = new mysqli("localhost", "id20685292_localhost", "Password_!@#4", "id2068
 
 if ($conn->connect_error) {
     $arr = ["result" => "error", "message" => "unable to connect"];
-    echo json_encode($arr);
-    exit();
 }
 
 if (!isset($_GET['doctor_id'])) {
     $arr = ["result" => "error", "message" => "doctor_id not provided"];
-    echo json_encode($arr);
-    exit();
 } else {
     $doctor_id = $_GET['doctor_id'];
     $sql = "SELECT * FROM schedules WHERE doctor_id = ?";
+
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $doctor_id);
 
-    if (!$stmt->execute()) {
+    if (!$stmt) {
         $arr = ["result" => "error", "message" => $conn->error];
-        echo json_encode($arr);
-        exit();
-    }
+    } else {
+        $stmt->bind_param("i", $doctor_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-    $result = $stmt->get_result();
-    $data = [];
+        $data = [];
 
-    if ($result->num_rows > 0) {
-        while ($r = mysqli_fetch_assoc($result)) {
-            array_push($data, $r);
+        if ($result->num_rows > 0) {
+            while ($r = mysqli_fetch_assoc($result)) {
+                array_push($data, $r);
+            }
         }
-    }
 
-    echo json_encode($data);
-    $stmt->close();
+        echo json_encode($data);
+
+        $stmt->close();
+    }
 }
 
 $conn->close();

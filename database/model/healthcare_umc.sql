@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2023 at 04:57 PM
+-- Generation Time: May 01, 2023 at 05:08 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -91,10 +91,10 @@ INSERT INTO `medicines` (`id`, `img`, `name`, `stock`, `price`, `description`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `schedule`
+-- Table structure for table `schedules`
 --
 
-CREATE TABLE `schedule` (
+CREATE TABLE `schedules` (
   `id` int(11) NOT NULL,
   `doctor_id` int(11) NOT NULL,
   `day` varchar(45) NOT NULL,
@@ -102,10 +102,10 @@ CREATE TABLE `schedule` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `schedule`
+-- Dumping data for table `schedules`
 --
 
-INSERT INTO `schedule` (`id`, `doctor_id`, `day`, `time`) VALUES
+INSERT INTO `schedules` (`id`, `doctor_id`, `day`, `time`) VALUES
 (1, 1, 'Monday', '09.00-13.00'),
 (2, 1, 'Wednesday', '14.00-18.00'),
 (3, 1, 'Thursday', '08.00-12.00'),
@@ -174,9 +174,9 @@ ALTER TABLE `medicines`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `schedule`
+-- Indexes for table `schedules`
 --
-ALTER TABLE `schedule`
+ALTER TABLE `schedules`
   ADD PRIMARY KEY (`id`,`doctor_id`),
   ADD KEY `fk_schedule_doctors_idx` (`doctor_id`);
 
@@ -197,9 +197,9 @@ ALTER TABLE `medicines`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `schedule`
+-- AUTO_INCREMENT for table `schedules`
 --
-ALTER TABLE `schedule`
+ALTER TABLE `schedules`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
@@ -207,9 +207,9 @@ ALTER TABLE `schedule`
 --
 
 --
--- Constraints for table `schedule`
+-- Constraints for table `schedules`
 --
-ALTER TABLE `schedule`
+ALTER TABLE `schedules`
   ADD CONSTRAINT `fk_schedule_doctors` FOREIGN KEY (`doctor_id`) REFERENCES `doctors` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 

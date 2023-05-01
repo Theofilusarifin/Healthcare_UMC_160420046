@@ -19,7 +19,7 @@ class DoctorDetailViewModel (application: Application): AndroidViewModel(applica
 
     fun fetch(doctorID : String) {
         queue = Volley.newRequestQueue(getApplication())
-        var url = "https://ubaya.fun/flutter/160419080/ANMP/ebook.php?id=$doctorID"
+        var url = "https://umchealthcare.000webhostapp.com/api/doctor.php?doctor_id=$doctorID"
 
         val stringRequest = StringRequest(
             Request.Method.GET, url,

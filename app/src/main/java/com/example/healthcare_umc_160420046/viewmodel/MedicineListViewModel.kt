@@ -25,7 +25,7 @@ class MedicineListViewModel(application: Application): AndroidViewModel(applicat
         loadingLD.value = true
 
         queue = Volley.newRequestQueue(getApplication())
-        var url = "https://ubaya.fun/flutter/160419080/ANMP/ebook.php"
+        var url = "https://umchealthcare.000webhostapp.com/api/medicine.php"
 
         val stringRequest = StringRequest(
             Request.Method.GET, url,
