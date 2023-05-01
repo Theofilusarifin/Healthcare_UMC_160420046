@@ -9,12 +9,23 @@ data class Doctor(
     val dob:String?,
     val age:Int?,
     val gender:String?,
+    )
 
+data class Schedule(
+    val monday:String?,
+    val tuesday:String?,
+    val wednesday:String?,
+    val thursday:String?,
+    val friday:String?,
+    val saturday:String?,
     )
 
 data class Medicine(
     val id:String?,
     val name:String?,
-    val stock:String?,
-    val price:String?,
+    val stock:Int?,
+    val price:Int?,
+    val description:String?,
+    val dosage:String?,
+    val minAge:Int?,
     )

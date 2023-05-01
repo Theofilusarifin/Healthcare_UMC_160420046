@@ -26,7 +26,7 @@
                 tools:src="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/txtDoctorDetail"
+                android:id="@+id/txtMedicineDetail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -38,7 +38,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txtDoctorNameDetail"
+                android:id="@+id/txtMedicineNameDetail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -49,7 +49,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imgDetailDetail"
-                app:layout_constraintTop_toBottomOf="@+id/txtDoctorDetail" />
+                app:layout_constraintTop_toBottomOf="@+id/txtMedicineDetail" />
 
             <TextView
                 android:id="@+id/txtSpecialistDetail"
@@ -61,7 +61,7 @@
                 android:text="Doctor Specialist Type"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imgDetailDetail"
-                app:layout_constraintTop_toBottomOf="@+id/txtDoctorNameDetail" />
+                app:layout_constraintTop_toBottomOf="@+id/txtMedicineNameDetail" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -86,9 +86,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
+            <Button
+                android:id="@+id/btnSeeSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="See Schedule"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBarDoctorDetail" />
+
             <RatingBar
                 android:id="@+id/ratingBarDoctorDetail"
-                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                style="@style/Widget.AppCompat.RatingBar.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -123,7 +133,7 @@
                 android:text="Date of Birth :"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtDoctorID" />
+                app:layout_constraintTop_toBottomOf="@+id/txtMedicineID" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -134,7 +144,7 @@
                 android:text="Age :"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtDOB" />
+                app:layout_constraintTop_toBottomOf="@+id/txtStock" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -145,10 +155,10 @@
                 android:text="Gender : "
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtAge" />
+                app:layout_constraintTop_toBottomOf="@+id/txtUsage" />
 
             <TextView
-                android:id="@+id/txtDoctorID"
+                android:id="@+id/txtMedicineID"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -158,34 +168,34 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtDoctorDesc" />
 
             <TextView
-                android:id="@+id/txtDOB"
+                android:id="@+id/txtStock"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
                 android:text="20/04/1995"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtDoctorID" />
+                app:layout_constraintTop_toBottomOf="@+id/txtMedicineID" />
 
             <TextView
-                android:id="@+id/txtAge"
+                android:id="@+id/txtUsage"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
                 android:text="57"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtDOB" />
+                app:layout_constraintTop_toBottomOf="@+id/txtStock" />
 
             <TextView
-                android:id="@+id/txtGender"
+                android:id="@+id/txtMinimumAge"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
                 android:text="Male"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtAge" />
+                app:layout_constraintTop_toBottomOf="@+id/txtUsage" />
 
             <ProgressBar
                 android:id="@+id/progressBarDetail"

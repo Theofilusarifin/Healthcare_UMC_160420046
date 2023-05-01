@@ -24,10 +24,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <Button
+                android:id="@+id/btnMedicineDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="See Detail"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPrice" />
+
             <ImageView
                 android:id="@+id/imgMedicineList"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_width="130dp"
+                android:layout_height="155dp"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +48,7 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/txtDoctorName"
+                android:id="@+id/txtDay"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -56,34 +68,10 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="Rp.10000 / Packs"
+                android:text="Rp.10000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imgMedicineList"
-                app:layout_constraintTop_toBottomOf="@+id/txtDoctorName" />
-
-            <TextView
-                android:id="@+id/txtStock"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="16dp"
-                android:text="1000"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/txtStock2"
-                app:layout_constraintTop_toTopOf="@+id/txtStock2" />
-
-            <TextView
-                android:id="@+id/txtStock2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="Stock :"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgMedicineList"
-                app:layout_constraintTop_toBottomOf="@+id/txtPrice" />
+                app:layout_constraintTop_toBottomOf="@+id/txtDay" />
 
             <ProgressBar
                 android:id="@+id/progressBar"
