@@ -29,9 +29,10 @@ class DoctorScheduleFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val doctorID = DoctorScheduleFragmentArgs.fromBundle(requireArguments()).doctorID
 
         viewModel = ViewModelProvider(this)[DoctorScheduleViewModel::class.java]
-        viewModel.refresh()
+        viewModel.fetch(doctorID)
 
         val recView = view.findViewById<RecyclerView>(R.id.recView)
         val refreshLayout = view.findViewById<SwipeRefreshLayout>(R.id.refreshLayout)
@@ -45,7 +46,7 @@ class DoctorScheduleFragment : Fragment() {
             recView.visibility = View.GONE
             txtError.visibility = View.GONE
             progressLoad.visibility  = View.VISIBLE
-            viewModel.refresh()
+            viewModel.fetch(doctorID)
             refreshLayout.isRefreshing = false
         }
 
@@ -54,7 +55,7 @@ class DoctorScheduleFragment : Fragment() {
 
     private fun observeViewModel(){
         viewModel.scheduleLD.observe(viewLifecycleOwner, Observer {
-            doctorScheduleAdapter.updateDoctorList(it)
+            doctorScheduleAdapter.updateScheduleList(it)
         })
 
         viewModel.loadingErrorLD.observe(viewLifecycleOwner, Observer {

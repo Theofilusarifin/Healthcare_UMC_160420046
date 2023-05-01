@@ -11,7 +11,7 @@ import com.example.healthcare_umc_160420046.model.Schedule
 class DoctorScheduleAdapter (private val scheduleList:ArrayList<Schedule>): RecyclerView.Adapter<DoctorScheduleAdapter.ScheduleViewHolder>() {
     class ScheduleViewHolder(val view: View): RecyclerView.ViewHolder(view)
 
-    fun updateDoctorList(newScheduleList:List<Schedule>){
+    fun updateScheduleList(newScheduleList:List<Schedule>){
         scheduleList.clear()
         scheduleList.addAll(newScheduleList)
         notifyDataSetChanged()

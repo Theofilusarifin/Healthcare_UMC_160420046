@@ -31,7 +31,7 @@ class DoctorDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val doctorID = DoctorDetailFragmentArgs.fromBundle(requireArguments()).doctorID
+        val doctorID = DoctorDetailFragmentArgs.fromBundle(requireArguments()).doctorID.toString()
 
         viewModel = ViewModelProvider(this)[DoctorDetailViewModel::class.java]
         viewModel.fetch(doctorID)
