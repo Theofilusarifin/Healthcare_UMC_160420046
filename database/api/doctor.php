@@ -9,8 +9,8 @@ if ($conn->connect_error) {
 }
 
 
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
+if (isset($_GET['doctor_id'])) {
+    $id = $_GET['doctor_id'];
     $sql = "SELECT * FROM doctors WHERE id = '$id'";
 } else {
     $sql = "SELECT * FROM doctors";
@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
     }
 }
 
-if (isset($_GET['id'])) {
+if (isset($_GET['doctor_id'])) {
     echo json_encode($data[0]);
 } else {
     echo json_encode($data);

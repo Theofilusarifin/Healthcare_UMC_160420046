@@ -11,6 +11,6 @@
         android:icon="@drawable/baseline_local_hospital_24"/>
     <item
         android:id="@+id/profileFragment"
-        android:title="Settings"
+        android:title="Profile"
         android:icon="@drawable/baseline_settings_24"/>
 </menu>

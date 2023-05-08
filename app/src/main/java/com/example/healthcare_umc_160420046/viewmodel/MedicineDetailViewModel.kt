@@ -19,7 +19,7 @@ class MedicineDetailViewModel (application: Application): AndroidViewModel(appli
 
     fun fetch(medicineID : String) {
         queue = Volley.newRequestQueue(getApplication())
-        var url = "https://umchealthcare.000webhostapp.com/api/medicine.php?id=$medicineID"
+        var url = "https://umchealthcare.000webhostapp.com/api/medicine.php?medicine_id=$medicineID"
 
         val stringRequest = StringRequest(
             Request.Method.GET, url,

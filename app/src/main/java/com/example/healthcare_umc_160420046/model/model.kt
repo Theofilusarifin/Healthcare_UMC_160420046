@@ -25,5 +25,5 @@ data class Medicine(
     val price:Int?,
     val description:String?,
     val dosage:String?,
-    val minAge:Int?,
+    val min_age:Int?,
     )

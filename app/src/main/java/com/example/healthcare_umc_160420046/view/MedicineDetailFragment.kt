@@ -30,10 +30,10 @@ class MedicineDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val doctorID = DoctorDetailFragmentArgs.fromBundle(requireArguments()).doctorID
+        val medicineID = MedicineDetailFragmentArgs.fromBundle(requireArguments()).medicineID
 
         viewModel = ViewModelProvider(this)[MedicineDetailViewModel::class.java]
-        viewModel.fetch(doctorID)
+        viewModel.fetch(medicineID)
 
         observeViewModel()
     }
@@ -47,7 +47,7 @@ class MedicineDetailFragment : Fragment() {
             view?.findViewById<TextView>(R.id.txtMedicineID)?.text = it.id
             view?.findViewById<TextView>(R.id.txtStock)?.text = it.stock.toString()
             view?.findViewById<TextView>(R.id.txtDosage)?.text = it.dosage
-            view?.findViewById<TextView>(R.id.txtMinAge)?.text = it.minAge.toString() + " Years"
+            view?.findViewById<TextView>(R.id.txtMinAge)?.text = it.min_age.toString() + " Years"
 
             val progressBarDetail =  view?.findViewById<ProgressBar>(R.id.progressBarDetail)
             if (progressBarDetail != null) {

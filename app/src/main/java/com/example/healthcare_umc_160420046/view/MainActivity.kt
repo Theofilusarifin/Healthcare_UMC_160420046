@@ -2,8 +2,8 @@ package com.example.healthcare_umc_160420046.view
 
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -12,9 +12,20 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.healthcare_umc_160420046.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import java.util.Calendar
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
+
+    private val calendar = Calendar.getInstance()
+    private val year = calendar.get(Calendar.YEAR)
+    private val month = calendar.get(Calendar.MONTH) + 1 // Note: Calendar.MONTH is zero-based
+    private val day = calendar.get(Calendar.DAY_OF_MONTH)
+    private val hour = calendar.get(Calendar.HOUR_OF_DAY)
+    private val minute = calendar.get(Calendar.MINUTE)
+    private val second = calendar.get(Calendar.SECOND)
+
+    val login_time = "$year-$month-$day $hour:$minute:$second"
 
     private fun showNavigation(){
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)

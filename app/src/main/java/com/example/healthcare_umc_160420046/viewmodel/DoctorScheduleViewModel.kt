@@ -31,7 +31,7 @@ class DoctorScheduleViewModel (application: Application): AndroidViewModel(appli
                 val sType = object : TypeToken<List<Schedule>>(){}.type
                 val result = Gson().fromJson<List<Schedule>>(response, sType)
                 scheduleLD.value = result
-
+                loadingErrorLD.value = false
                 loadingLD.value = false
                 Log.d("showvoley", response.toString())
             },
