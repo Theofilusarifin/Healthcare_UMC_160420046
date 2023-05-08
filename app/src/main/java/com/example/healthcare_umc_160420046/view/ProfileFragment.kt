@@ -17,6 +17,7 @@ class ProfileFragment : Fragment() {
             mainActivity = context
         }
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,6 +32,6 @@ class ProfileFragment : Fragment() {
         val txtusername = view.findViewById<TextView>(R.id.username)
         val txtlastlogin = view.findViewById<TextView>(R.id.last_login)
 
-        txtlastlogin.text = mainActivity.login_time
+        txtlastlogin.text = mainActivity.loginTime
     }
 }
