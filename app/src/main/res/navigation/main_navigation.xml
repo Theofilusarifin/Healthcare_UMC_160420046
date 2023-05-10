@@ -39,9 +39,6 @@
         <action
             android:id="@+id/actionDoctorDetail"
             app:destination="@id/doctorDetailFragment" />
-        <argument
-            android:name="username"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/doctorDetailFragment"

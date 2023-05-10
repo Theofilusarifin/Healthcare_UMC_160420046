@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.Navigation
 import com.example.healthcare_umc_160420046.R
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 class RegisterFragment : Fragment() {
 
@@ -34,7 +36,11 @@ class RegisterFragment : Fragment() {
 
         btnRegister.setOnClickListener {
             val username = txtNewUsername.text.toString()
-            val action = RegisterFragmentDirections.actionRegisterToDoctorList(username)
+            val lastLoginTime: String = SimpleDateFormat("dd-MMM-yyyy HH:mm", Locale.US).format(System.currentTimeMillis())
+
+            (requireActivity() as MainActivity).onLoginSuccess(username, lastLoginTime)
+
+            val action = RegisterFragmentDirections.actionRegisterToDoctorList()
             Navigation.findNavController(it).navigate(action)
         }
     }

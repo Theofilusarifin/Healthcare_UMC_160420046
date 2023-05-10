@@ -1,6 +1,5 @@
 package com.example.healthcare_umc_160420046.view
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,15 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.healthcare_umc_160420046.R
+import com.example.healthcare_umc_160420046.viewmodel.ProfileViewModel
 
 class ProfileFragment : Fragment() {
-    private lateinit var mainActivity: MainActivity
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is MainActivity) {
-            mainActivity = context
-        }
-    }
+    private lateinit var profileViewModel: ProfileViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,6 +26,8 @@ class ProfileFragment : Fragment() {
         val txtusername = view.findViewById<TextView>(R.id.username)
         val txtlastlogin = view.findViewById<TextView>(R.id.last_login)
 
-        txtlastlogin.text = mainActivity.loginTime
+        // Set the username and last login time values in the TextViews
+        profileViewModel.username?.let { txtusername.text = it }
+        profileViewModel.lastLoginTime?.let { txtlastlogin.text = it }
     }
 }
