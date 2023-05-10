@@ -32,7 +32,8 @@ class LoginFragment : Fragment() {
             val username = txtUsername.text.toString()
             val lastLoginTime: String = SimpleDateFormat("dd-MMM-yyyy HH:mm", Locale.US).format(System.currentTimeMillis())
 
-            (requireActivity() as MainActivity).onLoginSuccess(username, lastLoginTime)
+            val mainActivity = requireActivity() as MainActivity
+            mainActivity.onLoginSuccess(username, lastLoginTime)
 
             val action = LoginFragmentDirections.actionLoginToDoctorList()
             Navigation.findNavController(it).navigate(action)

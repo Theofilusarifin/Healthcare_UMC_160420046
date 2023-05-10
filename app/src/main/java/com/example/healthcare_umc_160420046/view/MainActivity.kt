@@ -1,6 +1,7 @@
 package com.example.healthcare_umc_160420046.view
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         profileViewModel.username = username
         profileViewModel.lastLoginTime = lastLoginTime
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
